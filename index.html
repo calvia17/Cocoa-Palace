@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="description" content="Bakery">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Bakery, Cake, Pastry, Cupcake">
+		<title>Cocoa Palace</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src = "script.js"></script>
+
+	</head>
+	<body>
+        <div id = "wrapper">
+
+            <!-- Background image -->
+            <div class = "background_image"> </div>
+
+            <!-- creates the main navigation menu -->
+            <nav class = "navigation">
+                <ul>
+                    <li class = "navigation item"> 
+                        <a href = "#Menu"> Menu </a>
+                    </li>
+                    <li class = "navigation item"> 
+                        <a href = "offers.html"> Offers </a>
+                    </li>
+                    <li class = "navigation item"> 
+                        <a href = "gift_cards.html"> Gift Cards </a>
+                    </li>
+                    <li id = "cart">
+                        <a href = "cart.html"> 
+                            <img class = "cart" src = "images/cart.png" alt = "Cart Icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Adds the logo and slogan -->
+            <div id = "title">
+                    <img id = "cocoa_palace" src = "images/cocoa_palace.png" alt = "Logo">
+                    <p id = "slogan"> Perfection since 1987 </p>
+            </div>
+        </div>
+                
+        <!-- Creates the menu -->
+        <div id = "Menu">
+            <h1 class = "headings"> Cakes </h1>
+
+            <!-- A carousel in the menu with left and right buttons -->
+            <div class = "carousel" data-carousel>
+                
+                <!-- button to slide the carousel to the left -->
+                <button class = "button_left" onclick = "onClickLeft(this)">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+
+                <!-- active items in the carousel -->
+                <div class = "Items" data-active active = "data-active">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate cake</p>
+                            <p> $50 </p>
+                            <!--<button class = "addCart" onclick = "addCart(this)"> Add to Cart </button>-->
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/red_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Red velvet cake </p>
+                            <p> 65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fruit cake</p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fudge_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fudge cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_cheese_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango cheese cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_coconut_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate coconut cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/vanilla_fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Vanilla fruit cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_truffle_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate truffle cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/wedding_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Wedding cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/purple_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Purple velvet cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_mint_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango mint cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/butterscotch_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Butterscotch cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- button to slide the carousel to the right -->
+                <button class = "button_right" onclick = "onClickRight(this)">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+
+            </div>
+            <h1 class = "headings"> Pastries </h1>
+
+            <!-- a carousel in the menu with left and right buttons -->
+            <div class = "carousel" data-carousel>
+
+                <!-- button to slide the carousel to the left -->
+                <button class = "button_left" onclick = "onClickLeft(this)">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+
+                <!-- active items in the carousel -->
+                <div class = "Items" data-active active = "data-active">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate cake</p>
+                            <p> $50 </p>
+                            <!--<button class = "addCart" onclick = "addCart(this)"> Add to Cart </button>-->
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/red_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Red velvet cake </p>
+                            <p> 65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fruit cake</p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fudge_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fudge cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_cheese_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango cheese cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_coconut_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate coconut cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/vanilla_fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Vanilla fruit cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_truffle_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate truffle cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/wedding_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Wedding cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/purple_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Purple velvet cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_mint_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango mint cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/butterscotch_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Butterscotch cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- button to slide carousel to the right -->
+                <button class = "button_right" onclick = "onClickRight(this)">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <h1 class = "headings"> Cupcakes </h1>
+
+            <!-- a acrousel with left and right buttons -->
+            <div class = "carousel" data-carousel>
+
+                <!-- button to slide the carousel to the left -->
+                <button class = "button_left" onclick = "onClickLeft(this)">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </button>
+
+                <!-- active items in the carousel -->
+                <div class = "Items" data-active active = "data-active">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate cake</p>
+                            <p> $50 </p>
+                            <!--<button class = "addCart" onclick = "addCart(this)"> Add to Cart </button>-->
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/red_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Red velvet cake </p>
+                            <p> 65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fruit cake</p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/fudge_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Fudge cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_cheese_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango cheese cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_coconut_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate coconut cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/vanilla_fruit_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Vanilla fruit cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/chocolate_truffle_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Chocolate truffle cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- inactive items in the carousel -->
+                <div class = "Items">
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/wedding_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Wedding cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/purple_velvet_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Purple velvet cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/mango_mint_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Mango mint cake </p>
+                            <p> $50 </p>
+                        </button>
+                    </div>
+                    <div class = "Item">
+                        <img class = "item_pic" src = "images/butterscotch_cake.jpg" alt = "Item Picture">
+                        <button class = "item_description" onclick = "addCart(this)" onmouseenter="itemHover(this)"
+                            onmouseleave = "itemLeave(this)">
+                            <p> Butterscotch cake </p>
+                            <p> $65 </p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- button to slide the carousel to the right -->
+                <button class = "button_right" onclick = "onClickRight(this)">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--footer containg logo and contact details -->
+        <footer class = "footer">
+
+            <!-- background image for footer-->
+            <div class = "footer_image"> </div>
+
+            <!-- first column of contact details -->
+            <div id = "contact1">
+                <img id = "cocoa_palace_footer" src = "images/cocoa_palace.png" alt = "Logo">
+                <p> 215 Grey Street </p>
+                <p> QLD 4101 </p>
+                <p> 04365336 </p>
+                <p> cocoa.palace@gmail.com </p>
+            </div>
+
+            <!-- second column of contact details -->
+            <div id = "contact2">
+                <p> Terms and Conditions </p>
+                <p> Privacy Policy </p>
+                <div id = "social_media">
+                    <img id = "social_media_pic" src = "images/social_media.png" alt = "Social Media">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="description" content="Bakery">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Bakery, Cake, Pastry, Cupcake">
+		<title>Cocoa Palace</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src = "script.js"></script>
+
+	</head>
+	<body>
+        <!-- main navigation menu -->
+        <nav class = "navigation">
+            <ul>
+                <li class = "navigation item"> 
+                    <a href = "index.html#Menu"> Menu </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "offers.html"> Offers </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "gift_cards.html"> Gift Cards </a>
+                </li>
+                <li id = "cart">
+                    <a href = "cart.html"> 
+                        <img class = "cart" src = "images/cart.png" alt = "Cart Icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class = "heading"> Gift Cards </h1>
+
+        <!-- gifts image -->
+        <img id = "gifts" src = "images/gift_card1.jpg" alt = "Gift Picture">
+
+        <div class ="gifts_text_wrapper">
+
+            <!-- a gift card -->
+            <div class = "gifts_text_box">
+                <p> GIFT CARD 1</p>
+                <br>
+                <p> Explanation </p>
+                <button class = "addCart" onclick = "addCart(this)"> Add to Cart </button>
+            </div>
+
+            <!-- a gift card -->
+            <div class = "gifts_text_box">
+                <p> GIFT CARD 2</p>
+                <br>
+                <p> Explanation </p>
+                <button class = "addCart" onclick = "addCart(this)"> Add to Cart </button>
+            </div>
+        </div>
+
+        <!-- navigation buttons -->
+        <div id = "gifts_page_buttons">
+            <button class = "button_grey" onclick = Menu()> Go to Menu </button>
+            <button class = "button_grey" onclick = Cart()> Go to Cart </button>
+        </div>
+    </body>
+</html>

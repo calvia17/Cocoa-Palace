@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="description" content="Bakery">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Bakery, Cake, Pastry, Cupcake">
+		<title>Cocoa Palace</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src = "script.js"></script>
+
+	</head>
+	<body>
+        <!-- main navigation menu -->
+        <nav class = "navigation">
+            <ul>
+                <li class = "navigation item"> 
+                    <a href = "index.html#Menu"> Menu </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "offers.html"> Offers </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "gift_cards.html"> Gift Cards </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "login.html"> Login </a>
+                </li>
+                <li id = "cart">
+                    <a href = "cart.html"> 
+                        <img class = "cart" src = "images/cart.png" alt = "Cart Icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class = "heading"> Checkout - Delivery Details </h1>
+
+        <!-- delivery details -->
+        <div id = "delivery">
+
+            <!-- first column of delivery details -->
+            <div class = "column">
+
+                <!-- field names -->
+                <div class = "field_name">
+                    <p> Delivery Type: </p>
+                    <p id = "phone_label"> Phone: </p>
+                    <p id = "email_label"> Email: </p>
+                    <p id = "date_label"> When would you like your order? </p>
+                </div>
+
+                <!-- field values -->
+                <div class = "field_value">
+
+                    <!-- dropdown button for 'delivery type' field -->
+                    <button id = "dropdown_button" onmouseover="dropdown()" onmouseleave="dropup()">
+                        <p id = "delivery_type"> </p>
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </button>
+
+                    <!-- dropdown menu for 'delivery type' field -->
+                    <div id = "dropdown" role = "button" onmouseover="dropdown()" onmouseleave="dropup()">
+                        <button id = "option_pickup" onclick = "Pickup()"> Pick-Up </button>
+                        <button id = "option_delivery" onclick = "Delivery()"> Delivery </button>
+                    </div>
+
+                    <input type = "tel" id = "phone" name = "phone">
+                    <input type = "text" id = "email" name = "email">
+                    <input type = "date" id = "date" name = "date">
+
+                </div>
+            </div>
+
+            <!-- first column of delivery details -->
+            <div class = "column">
+
+                <!-- field names -->
+                <div class = "field_name">
+                    <p id = "unit_label"> Unit: </p>
+                    <p id = "street_label"> Street: </p>
+                    <p id = "suburb_label"> Suburb: </p>
+                    <p id = "postal_code_label"> Postal Code: </p>
+                </div>
+
+                <!-- field values -->
+                <div class = "field_value">
+                    <input type = "number" id = "unit" name = "unit">
+                    <input type = "text" id = "street" name = "street">
+                    <input type = "text" id = "suburb" name = "suburb">
+                    <input type = "number" id = "postal_code" name = "postal_code">
+                </div>
+            </div>
+        </div>
+
+        <!-- note -->
+        <p id = "note"> Note: We only deliver within Brisbane </p>
+
+        <!-- navigation buttons -->
+        <div id = "delivery_page_buttons">
+            <button id = "continue" onclick = ContinueToPayment()> Continue </button>
+            <button class = "back_to_cart" onclick = Cart()> Back to Cart </button>
+        </div>
+
+    </body>
+</html>

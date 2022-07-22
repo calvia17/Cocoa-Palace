@@ -1,0 +1,652 @@
+/* sets margin and padding for all html element to 0 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* styles the background image for the home page */
+.background_image {
+    background-image: url("images/cake_bg.jpg");
+    opacity:0.7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 101%;
+    object-fit: cover;
+    padding: 0px;
+    position: absolute;
+    width: 101%;
+    z-index: -1;
+    display: block;
+}
+
+/* styles the wrapper div for main navigation menu */
+.wrapper {
+    display: block;
+}
+
+/* styles the unordered list for main navigation menu */
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    height: 6%;
+    background-color: #453e3e;
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 1;
+    padding: 0.2%;
+}
+
+/* styles the main navigation menu links */
+.navigation ul li a {
+    color: white;
+    top: 0;
+    text-decoration: none;
+    display: block;
+    border-radius: 0.2em;
+	margin: 5px;
+	width: 100%;
+}
+
+/* styles the main navigation menu links when they are hovered over */
+.navigation ul li a:hover {
+    background-color: #5c5353
+}
+
+/* styles the cart icon on the main navigation menu */
+.cart {
+    height: 30px;
+    filter: invert(100%);
+}
+
+/* styles the div containing the logo and slogan on the homepage */
+#title {
+    display: block;
+    padding-top: 200px;
+    opacity: 1;
+    color: black;
+    z-index: 1;
+}
+
+/* styles the logo on the homepage */
+#cocoa_palace {
+    width: 50%;
+    margin-left: 28%;
+}
+
+/* styles the slogan on the homepage */
+#slogan {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 60%;
+}
+
+/* styles the headings on each webpage */
+.headings, .heading {
+    padding-left: 10.5%;
+    padding-bottom: 2.5%;
+    color: #685F5F;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* styles the headings on all webpages except the homepage */
+.heading {
+    padding-top: 15%;
+    padding-left: 3%;
+}
+
+/* styles each Offer element which contains an image and description of the offer */
+.Offer {
+    display: flexbox;
+    flex-direction: row;
+    margin: 2.5%;
+}
+
+/* styles each offer image */
+.offer_image {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 0.2em;
+}
+
+/* styles the image on the gift cards page */
+#gifts {
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+    border-radius: 0.5em;
+}
+
+/* styles each gift card text box on the gift cards page */
+.gifts_text_box {
+    background-color: #E5E5E5;;
+    width: 40%;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 0.5em;
+    background-color: #E5E5E5;
+}
+
+/* styles the div containing the buttons at the bottom of the gift cards webpage */
+#gifts_page_buttons {
+    width: 100%;
+    float: right;
+    margin: 2%;
+}
+
+/* styles the div containing the gift card text boxes on the gift cards page */
+#gifts_text_wrapper {
+    height: 40%;
+}
+
+/* styles the menu section of the homepage which contains the item carousels */
+#Menu{
+    margin-top: 60vh;
+}
+
+/* styles the div containing the items in each carousel and keeps it hidden */
+.Items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    font-size: 10px;
+    opacity: 0;
+    z-index: -1;
+    padding-left: 5%;
+    position: absolute;
+    padding-right: 3%;
+}
+
+/* displays the active items in the carousels in the menu section of the homepage */
+.Items[data-active] {
+    opacity: 1;
+    z-index: 0;
+    position: relative;
+}
+
+/* styles the items in the carousels in the menu section of the homepage */
+.Item {
+    width: 15vw;
+    margin-right: 1vh;
+}
+
+/* styles the buttons used to move left and right in the carousels in the menu section of the homepage */
+.button_left, .button_right {
+    width: 5%;
+    height: 18%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: transparent;
+    border-radius: 0.5em;
+}
+
+/* styles the carousels in the menu section of the homepage */
+.carousel {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25vw;
+}
+
+/* styles the item images in the carousels in the menu section of the homepage */
+.item_pic {
+   width: 100%;
+   height: 70%;
+   object-fit: cover;
+   border-radius: 0.5em;
+}
+
+/* styles the item descriptions in the menu section of the home page 
+    and the offer descriptions in the offer page */
+.item_description, .offer_description {
+    text-align: center;
+    background-color: #E5E5E5;
+    border-radius: 0.5em;
+    border: none;
+    width: 100%;
+    z-index: -2;
+}
+
+/* changes the style of the item descriptions in the menu section of the 
+    home page when the mouse hovers over them */
+.item_description:hover {
+    background-color: #5c5353;
+    color: white;
+}
+
+/* styles the offer descriptions in the offer page */
+.offer_description {
+    font-size: 15px;
+    width: 65vw;
+    float: right;
+    height: 20vw;
+    padding-top:5%;
+}
+
+/* styles the footer section of the homepage */
+.footer {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space between;
+    font-size: 20px;
+    text-align: center;
+    height: 20%;
+    width: 101%;
+    z-index: 0;
+    margin-top: 5%;
+}
+
+/* styles the background image in the footer section of the homepage */
+.footer_image {
+    background-image: url("images/footer.jpg");
+    opacity:0.7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 101%;
+    height: 30%;
+    display: block;
+    z-index: -1;
+}
+
+/* styles the logo in the footer section of the homepage */
+#cocoa_palace_footer {
+    height: 25%;
+    z-index: 0;
+}
+
+/* styles the first column of data in the footer section of the homepage */
+#contact1 {
+    padding: 2%;
+    margin-left: 5%;
+    width: 30%;
+    z-index: 0;
+}
+
+/* styles the second column of data in the footer section of the homepage */
+#contact2 {
+    padding-top: 15%;
+    width: 50%;
+    margin-left: 10%;
+    z-index: 0;
+}
+
+/* adjusts the width of social media icons in the footer section of the homepage */
+#social_media_pic {
+    width: 40%;
+}
+
+/* styles grey buttons, 'continue' button, 'proceed to checkout' button, 'back to cart' buttons and 'pay' button */
+.button_grey, #continue, #checkout, .back_to_cart, #pay {
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5em;
+    background-color:#5c5353;
+    text-decoration: none;
+    float: right;
+    width: 20vw;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    padding: 1%;
+    border: none;
+}
+
+/* styles the 'add to cart' button for items in the menu section of the homepage */
+.addCart {
+    width:50%;
+    margin-bottom: 5%;
+    background-color:#5c5353;
+    color: white;
+    padding: 5%;
+    margin: 2%;
+    border-radius: 0.5em;
+    border: none;
+}
+
+/* styles the div containing the cart items and the headers */
+#productsContainer {
+    width: 80%;
+    margin: auto;;
+}
+
+/* styles the item images in the cart */
+#productsContainer img {
+    width: 10vw;
+    height: 8vw;
+    border-radius: 0.5em;
+}
+
+/* styles the headers in the cart page */
+#productHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* styles the div containg the item image and name in the cart page */
+.productName {
+   width: 35%;
+   margin-top: 5%;
+   display: flex;
+   flex-direction: row;
+}
+
+/* styles the item names in the cart page */
+.productName p {
+    margin:  0 auto;
+    padding: 1%;
+}
+
+/* styles the div containing the items in the cart page */
+.product {
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    width: 100%;
+    padding: 2%;
+    padding-top:0%;
+    margin: 2%;
+    border-radius: 0.5em;
+}
+
+/* styles the prices of items in the cart page */
+.price {
+    margin-top: 5%;
+    width: 15%;
+}
+
+/* styles the quantities of items in the cart page */
+.quantity {
+    width: 25%;
+    margin-top: 5%;
+}
+
+/* styles the total price of each item in the cart page */
+.total {
+    width: 10%;
+    margin-top: 5%;
+    margin-right: 8%;
+}
+
+/* styles the div containing the total cost of all items in the cart and the delivery cost and the headers*/
+#total_price {
+    width: 100%;
+    background-color: #E5E5E5;
+    border-radius: 0.5em;
+    padding: 1%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* styles the div containing the total cost of all items in the cart and the delivery cost */
+#total_price_values {
+    text-align: right;
+}
+
+/* styles the div containing the remove button which removes items from the cart */
+#remove {
+    width: 5%;
+    height: 10%;
+    margin-top: 5%;
+    float: right;
+}
+
+/* styles the  remove button which removes items from the cart */
+#remove button {
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2%;
+    border-radius: 1em;
+}
+
+/* styles the div containing the buttons at the bottom of the cart page */
+#cart_page_buttons {
+    margin: 2%;
+    margin-right: 0%;
+}
+
+.increase {
+    width: 20%;
+}
+
+
+/* styles the div containing the input fields and labels in the delivery page */
+#delivery, #payment {
+    display: flex;
+    flex-direction: row;
+    background-color:#90908F;
+    margin: 3%;
+    margin-top: 1%;
+    padding: 2%;
+    border-radius: 0.5em;
+    color: white;
+    font-size: 90%;
+}
+
+/* styles each column containing the input fields and labels in the delivery page */
+.column {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* styles the div containing the field labels in the delivery page */
+.field_name {
+    width: 48%;
+}
+
+/* styles the div containing the input fields in the delivery page */
+.field_value {
+    width: 48%;
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 2%;
+}
+
+/* styles the dropdown button in the 'delivery type' input field in the delivery page */
+#dropdown_button {
+    width: 50%;
+    float: right;
+    border-radius: 0.5em;
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+
+/* styles the arrow icon in the dropdown button in the 'delivery type' input field in the delivery page */
+#dropdown_button i {
+    float: right;
+    margin: 2%;
+}
+
+/* styles the text area in the dropdown button in the 'delivery type' input field in the delivery page */
+#dropdown_button p {
+    width: 95%;
+    text-align: center;
+    margin-right: 15%;
+}
+
+/* styles the div containing the dropdown menu options in the 'delivery type' input field in the delivery page */
+#dropdown {
+    margin-right: 2%;
+    width: 50%;
+    float: right;
+    z-index: 0;
+    background-color: white;
+    display: none;
+}
+
+/* styles the dropdown menu options in the 'delivery type' input field in the delivery page */
+#option_pickup, #option_delivery {
+    width: 100%;
+}
+
+/* styles the input fields and labels in the delivery page and the payment page */
+#phone, #email, #date, #unit, #street, #suburb, #postal_code, #account_number, #expiry, #security_code,
+    #phone_label, #email_label, #date_label, #unit_label, #street_label, #suburb_label, #postal_code_label, 
+        #account_number_label, #expiry_label, #security_code_label{
+    margin-top: 2%;
+    width: 100%;
+}
+
+/* styles the 'unit' input field in the delivery page */
+#unit {
+    margin-top: 0%;
+}
+
+/* changes the colour of 'continue', 'pay' and 'proceed to checkout' buttons to green */
+#continue, #pay, #checkout {
+    background-color: green;
+}
+
+/* changes the colour of 'continue', 'pay' and 'proceed to checkout' buttons to red */
+.back_to_cart {
+    background-color: red;
+}
+
+/* styles the note in the delivery page */
+#note {
+    margin: 3%;
+    background-color: #90908F;
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+/* styles the text in the payment completed page */
+#thanks {
+    padding: 20%;
+    padding-bottom: 10%;
+    text-align: center;
+    color:#5c5353;
+}
+
+
+
+/* changes size of elements when screen width >= 900px */
+@media only screen and (min-width: 900px) {
+    /* styles the slogan on the homepage */
+    #slogan {
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding-left: 60%;
+    }
+
+    /* styles the main navigation menu links */
+    .navigation ul li a{
+        font-size: 20px;
+    }
+
+    /* styles the cart icon on the main navigation menu */
+    .cart {
+        height: 30px;
+    }
+
+    /* styles the menu section of the homepage which contains the item carousels */
+    .Menu {
+        margin-top: 50vh;
+    }
+
+    /* styles the div containing the items in each carousel and keeps it hidden */
+    .Items {
+        margin-bottom: 5%;
+        font-size: 20px;
+    }
+
+    /* styles the logo on the homepage */
+    #cocoa_palace {
+        width: 40%;
+        margin-left: 32%;
+    }
+
+    /* styles the footer section of the homepage */
+    .footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space around;
+		height: 10%;
+		font-size: 20px;
+	}
+	
+    /* styles the background image in the footer section of the homepage */
+	.footer_image {
+		width: 101%;
+		height: 30%;
+	}
+	
+    /* styles the logo in the footer section of the homepage */
+	#cocoa_palace_footer {
+		height: 30%;
+		z-index: 0;
+	}
+	
+    /* styles the first column of data in the footer section of the homepage */
+	#contact1 {
+		padding: 2%;
+		margin-left: 12%;
+		width: 30%;
+		z-index: 0;
+	}
+	
+    /* styles the second column of data in the footer section of the homepage */
+	#contact2 {
+		padding-top: 7%;
+		width: 30%;
+		margin-left: 5%;
+		margin-right: 10%;
+		z-index: 0;
+	}
+
+    /* adjusts the width of social media icons in the footer section of the homepage */
+	#social_media_pic {
+		width: 40%;
+	}
+
+    /* styles the heading on the homepage */
+    .headings {
+        padding-left: 20%;
+    }
+
+    /* styles the headings on all webpages except the homepage */
+    .heading {
+        padding-top: 10%;
+    }
+
+    /* styles the offer descriptions in the offer page */
+    .offer_description {
+        height: 15vh;
+        width: 78vw;
+    }
+
+    /* styles each offer image */
+    .offer_image {
+        height: 23vh;
+        width: 23vh
+    }
+
+} 

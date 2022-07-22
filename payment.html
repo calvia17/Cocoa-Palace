@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="description" content="Bakery">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Bakery, Cake, Pastry, Cupcake">
+		<title>Cocoa Palace</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src = "script.js"></script>
+
+	</head>
+	<body>
+
+        <!-- main navigation menu -->
+        <nav class = "navigation">
+            <ul>
+                <li class = "navigation item"> 
+                    <a href = "index.html#Menu"> Menu </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "offers.html"> Offers </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "gift_cards.html"> Gift Cards </a>
+                </li>
+                <li class = "navigation item"> 
+                    <a href = "login.html"> Login </a>
+                </li>
+                <li id = "cart">
+                    <a href = "cart.html"> 
+                        <img class = "cart" src = "images/cart.png" alt = "Cart Icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class = "heading"> Checkout - Payment Details </h1>
+
+        <!-- payment details -->
+        <div id = "payment">
+
+            <!-- field names -->
+            <div class = "field_name">
+                <p> BSB: </p>
+                <p id = "account_number_label"> Account Number: </p>
+                <p id = "expiry_label"> Expiration date: </p>
+                <p id = "security_code_label"> Security Code: </p>
+            </div>
+
+            <!-- field values -->
+            <div class = "field_value">
+                <input type = "number" id = "bsb" name = "bsb">
+                <input type = "number" id = "account_number" name = "account_number">
+                <input type = "date" id = "expiry" name = "expiry">
+                <input type = "number" id = "security_code" name = "security_code">
+            </div>
+        </div>
+
+        <!-- navigation buttons -->
+        <div id = "payment_page_buttons">
+            <button id = "pay" onclick = Pay()> Pay </button>
+            <button class = "back_to_cart" onclick = Cart()> Cancel </button>
+        </div>
+    </body>
+</html>
